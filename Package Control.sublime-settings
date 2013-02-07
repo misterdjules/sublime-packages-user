@@ -1,0 +1,17 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"CoffeeCompile",
+		"CoffeeLint",
+		"CoffeeScript",
+		"CoffeeScript Function Finder",
+		"EJS",
+		"Git",
+		"Github Tools",
+		"Package Control",
+		"sublime-better-coffeescript",
+		"SyncedSideBar",
+		"ZenCoding"
+	]
+}
