@@ -1,0 +1,66 @@
+<snippet>
+  <content><![CDATA[
+async = require 'async'
+
+# Routes for ${1:plural resource name}
+module.exports = (app) ->
+  ${2:Model Name} = mongoose.model "$2"
+
+  # Index page for $1
+  app.get '/$1', (req, res) ->
+    $2.find {}, (err, $1) ->
+      if err? then req.flash 'error', 'Something went wrong when retreiving $1'
+      else            
+        res.render '$1/index', 
+          elements: elements
+
+  # New $1' element page
+  app.get '/$1/new', (req, res) ->
+    res.render '$1/new'
+
+  # Create a new $1' element
+  app.post '/$1', (req, res) ->
+    ${3:Model Instace Var Name} = new $2(req.$3)
+    $3.save (err, $3) ->
+      if err? then req.flash 'error', 'Something went wrong when saving'
+      else req.flash 'info', '$2 successfully saved'
+
+      res.render '$1/index'
+
+  # Show a $1' element
+  app.get '/$1/:id', (req, res) ->
+    $2.findById req.params.id, (err, $3) ->
+      if err? then req.flash 'error', 'Error retreiving $3'
+      
+      res.render '$1/show',
+        $3: $3
+  
+  # Edit a $1' element
+  app.get '/$1/:id/edit', (req, res) ->
+    $2.findById req.params.id, (err, $3) ->
+      if err? then req.flash 'error', 'Error retreiving $3'
+      
+      res.render '$1/edit',
+        $3: $3
+
+  # Update a $1' element
+  app.put '/$1/:id', (req, res) ->
+    $2.update {_id: req.params.id}, req.$3, {}, (err, updateCount) ->
+      if err? then req.flash 'error', 'Error updating $3'
+      else req.flash 'info', '#2 successfully updated'
+      
+      res.render '$1/index'
+
+  # Destroy a $1' element
+  app.del '/$1/:id', (req, res) ->
+    $2.remove {_id: req.params.id}, (err) ->
+      if err? then req.flash 'error', 'Error deleting $3'
+      else req.flash 'info', 'The record was succesfully deleted'
+
+      res.render  '$1/index'
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>routes</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.coffee</scope>
+</snippet>
