@@ -3,15 +3,18 @@
 	"installed_packages":
 	[
 		"CoffeeCompile",
-		"CoffeeLint",
 		"CoffeeScript",
 		"CoffeeScript Function Finder",
 		"EJS",
+		"Emmet",
 		"Git",
 		"Github Tools",
+		"Grails",
+		"JsFormat",
 		"Package Control",
+		"SideBarEnhancements",
 		"sublime-better-coffeescript",
-		"SyncedSideBar",
-		"ZenCoding"
+		"SublimeLinter",
+		"SyncedSideBar"
 	]
 }
