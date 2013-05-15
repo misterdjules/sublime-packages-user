@@ -2,7 +2,10 @@
 	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
+		"Alignment",
+		"Clipboard History",
 		"CoffeeCompile",
+		"CoffeeComplete Plus (Autocompletion)",
 		"CoffeeScript",
 		"CoffeeScript Function Finder",
 		"EJS",
