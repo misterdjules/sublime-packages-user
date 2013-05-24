@@ -3,11 +3,13 @@
 	"installed_packages":
 	[
 		"Alignment",
+		"Better CoffeeScript",
 		"Clipboard History",
 		"CoffeeCompile",
 		"CoffeeComplete Plus (Autocompletion)",
 		"CoffeeScript",
 		"CoffeeScript Function Finder",
+		"DocBlockr",
 		"EJS",
 		"Emmet",
 		"Git",
@@ -16,7 +18,6 @@
 		"JsFormat",
 		"Package Control",
 		"SideBarEnhancements",
-		"sublime-better-coffeescript",
 		"SublimeLinter",
 		"SyncedSideBar"
 	]
