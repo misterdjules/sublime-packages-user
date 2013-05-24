@@ -5,5 +5,12 @@
 		"Vintage"
 	],
 	"tab_size": 2,
-	"translate_tabs_to_spaces": true
+	"translate_tabs_to_spaces": true,
+  "todo": {
+        "folder_exclude_patterns": [
+            "node_modules",
+            "vendor", 
+            "tmp"
+        ]
+    }
 }
